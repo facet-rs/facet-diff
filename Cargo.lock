@@ -26,7 +26,7 @@ version = "0.28.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3290e0be77e9eeca366489c3b4010764dc897a83e5936a93857c3937f47a57aa"
 dependencies = [
- "facet-core",
+ "facet-core 0.28.0",
  "facet-macros",
  "static_assertions",
 ]
@@ -42,14 +42,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "facet-core"
+version = "0.29.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "52e5c150b48fd89a6a880ca0a5e7cf09d1c7c51ff57af655a740166a8a3fabbb"
+dependencies = [
+ "bitflags",
+ "impls",
+]
+
+[[package]]
 name = "facet-diff"
 version = "0.28.0"
 dependencies = [
  "cargo-husky",
  "facet",
- "facet-core",
+ "facet-core 0.28.0",
  "facet-pretty",
- "facet-reflect",
+ "facet-reflect 0.28.0",
 ]
 
 [[package]]
@@ -58,7 +68,7 @@ version = "0.28.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7eb526288148251e984f3a9ab3cef5191ca1da34a45fb5c548781e7053148e19"
 dependencies = [
- "facet-core",
+ "facet-core 0.28.0",
  "facet-macros-emit",
 ]
 
@@ -85,12 +95,12 @@ dependencies = [
 
 [[package]]
 name = "facet-pretty"
-version = "0.28.0"
+version = "0.29.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "67c4075c925ecdba56618db8e2e103ed33388067f18fb40ad27b7105ac559c6e"
+checksum = "644ee0f611efad156a4cd15a456f5185b9eaaffacd2a3a903c16f824122a2ca0"
 dependencies = [
- "facet-core",
- "facet-reflect",
+ "facet-core 0.29.0",
+ "facet-reflect 0.29.0",
 ]
 
 [[package]]
@@ -100,8 +110,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c1d24ca6fb9db79b26cb5e37d744591d710e05922dbca7c53505113151b50aef"
 dependencies = [
  "bitflags",
- "facet-core",
+ "facet-core 0.28.0",
  "owo-colors",
+]
+
+[[package]]
+name = "facet-reflect"
+version = "0.29.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "759240e5415b59d2712aec606b374f5d10ad071b2ff17daeb53ec7e987b60ac3"
+dependencies = [
+ "bitflags",
+ "facet-core 0.29.0",
 ]
 
 [[package]]
