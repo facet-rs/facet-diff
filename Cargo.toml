@@ -13,7 +13,7 @@ categories = ["development-tools", "data-structures"]
 facet = { version = "0.28.0" }
 facet-core = { version = "0.28.0" }
 facet-pretty = { version = "0.28.0" }
-facet-reflect = { version = "0.28.0" }
+facet-reflect = { version = "0.31.0" }
 
 [dev-dependencies]
 cargo-husky = { version = "1.5.0", default-features = false, features = ["user-hooks"] }
