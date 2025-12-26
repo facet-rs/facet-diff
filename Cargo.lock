@@ -9,12 +9,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1b8e56985ec62d17e9c1001dc89c88ecd7dc08e47eba5ec7c29c7b5eeecde967"
 
 [[package]]
-name = "byteorder"
-version = "1.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1fd0f2584146f6f2ef48085050886acf353beff7305ebd1ae69500e27c67f64b"
-
-[[package]]
 name = "cargo-husky"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -22,11 +16,11 @@ checksum = "7b02b629252fe8ef6460461409564e2c21d0c8e77e0944f3d189ff06c4e932ad"
 
 [[package]]
 name = "facet"
-version = "0.28.0"
+version = "0.31.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3290e0be77e9eeca366489c3b4010764dc897a83e5936a93857c3937f47a57aa"
+checksum = "61e137a8dd9fd9aa1e57d216b6dac1a56bf053aa993569efa3e37a8c8351f5a7"
 dependencies = [
- "facet-core",
+ "facet-core 0.31.7",
  "facet-macros",
  "static_assertions",
 ]
@@ -42,31 +36,41 @@ dependencies = [
 ]
 
 [[package]]
+name = "facet-core"
+version = "0.31.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9c8464c389054f871191fbd688bade5e4f21f59948a56029ea37f2359f3dc330"
+dependencies = [
+ "bitflags",
+ "impls",
+]
+
+[[package]]
 name = "facet-diff"
 version = "0.28.0"
 dependencies = [
  "cargo-husky",
  "facet",
- "facet-core",
+ "facet-core 0.28.0",
  "facet-pretty",
  "facet-reflect",
 ]
 
 [[package]]
 name = "facet-macros"
-version = "0.28.0"
+version = "0.31.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7eb526288148251e984f3a9ab3cef5191ca1da34a45fb5c548781e7053148e19"
+checksum = "430c16795d9f2b97cf71d3af2de995a881893de8c5696a1172846eb67544c787"
 dependencies = [
- "facet-core",
+ "facet-core 0.31.7",
  "facet-macros-emit",
 ]
 
 [[package]]
 name = "facet-macros-emit"
-version = "0.28.0"
+version = "0.31.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "52619b4834e81068fd915795c297e52f894a18742581627568d451e39dd1c906"
+checksum = "49fc1f81387b066eb0465aa4f55d30fd1bb0a4bcefb9e9a6622518d29dbae3b9"
 dependencies = [
  "facet-macros-parse",
  "quote",
@@ -74,9 +78,9 @@ dependencies = [
 
 [[package]]
 name = "facet-macros-parse"
-version = "0.28.0"
+version = "0.31.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e6097c15775794dd66eb69cd4614be654877e3e6e4a93ca0d0440236c1798f0b"
+checksum = "0af3f19a45642ce96d3efc942c4a74ff52c5a7313be1896be6d6743be7c8a8ba"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -89,7 +93,7 @@ version = "0.28.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "67c4075c925ecdba56618db8e2e103ed33388067f18fb40ad27b7105ac559c6e"
 dependencies = [
- "facet-core",
+ "facet-core 0.28.0",
  "facet-reflect",
 ]
 
@@ -100,17 +104,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c1d24ca6fb9db79b26cb5e37d744591d710e05922dbca7c53505113151b50aef"
 dependencies = [
  "bitflags",
- "facet-core",
+ "facet-core 0.28.0",
  "owo-colors",
-]
-
-[[package]]
-name = "fxhash"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c31b6d751ae2c7f11320402d34e41349dd1016f8d5d45e48c4312bc8625af50c"
-dependencies = [
- "byteorder",
 ]
 
 [[package]]
@@ -150,10 +145,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "shadow_counted"
-version = "0.4.0"
+name = "rustc-hash"
+version = "2.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "65da48d447333cebe1aadbdd3662f3ba56e76e67f53bc46f3dd5f67c74629d6b"
+checksum = "357703d41365b4b27c590e3ed91eabb1b663f07c4c084095e60cbed4362dff0d"
 
 [[package]]
 name = "static_assertions"
@@ -169,12 +164,11 @@ checksum = "5a5f39404a5da50712a4c1eecf25e90dd62b613502b7e925fd4e4d19b5c96512"
 
 [[package]]
 name = "unsynn"
-version = "0.1.1"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7940603a9e25cf11211cc43b81f4fcad2b8ab4df291ca855f32c40e1ac22d5bc"
+checksum = "501a7adf1a4bd9951501e5c66621e972ef8874d787628b7f90e64f936ef7ec0a"
 dependencies = [
- "fxhash",
  "mutants",
  "proc-macro2",
- "shadow_counted",
+ "rustc-hash",
 ]
